@@ -53,6 +53,7 @@ h4 {
   color: var(--black);
   padding: 0;
   margin: 0;
+  text-shadow: none;
 }
 
 h5 {
@@ -77,11 +78,15 @@ p {
 body {
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 section {
-  max-width: 1440px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   padding: 64px 80px 64px 80px;
 }
 
@@ -95,11 +100,12 @@ img {
 
 /* Navbar styling */
 .navbar {
-  display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding-top: 20px;
   padding-bottom: 20px;
+  max-width: 1440px;
 }
 
 .navLogo {
@@ -142,6 +148,7 @@ a {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  max-width: 1440px;
 }
 .heroSection div {
   width: 50%;
@@ -163,6 +170,8 @@ a {
 .centerAlign {
   text-align: center;
   padding: 120px 0 120px 0;
+  max-width: 1440px;
+  margin-top: -50px;
 }
 
 .aboutSection {
@@ -225,16 +234,17 @@ a {
 .cardContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; /* Sentrer kortene horisontalt */
-  align-items: center; /* Sentrer kortene vertikalt */
+  justify-content: center; /* Sentrer kortene horisontalt */
+  align-items: center;
   max-width: 1440px;
   width: 100%;
+  gap: 40px;
 }
 
 .behandlingerCard {
   overflow: hidden;
   border-radius: 10px;
-  width: 290px;
+  width: 330px;
   background: white;
   display: flex;
   flex-direction: column;
@@ -244,6 +254,8 @@ a {
 
 .behandlingerCard img {
   width: 100%;
+  height: 170px;
+  object-fit: cover;
 }
 
 .cardText {
@@ -288,13 +300,23 @@ a {
 
 /* Utvalgte produkter */
 .utvalgteContainer {
-  max-width: 100%;
+  max-width: 1440px;
   padding: 64px 0 64px 0;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 40px;
+}
+
+.productContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  overflow: hidden;
+  gap: 40px;
 }
 
 .topContainer {
@@ -302,6 +324,45 @@ a {
   justify-content: space-between;
   max-width: 1440px;
   width: 100%;
+}
+
+.productCard {
+  overflow: hidden;
+  min-width: 256px;
+  text-align: left;
+}
+
+.productImg {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  margin-bottom: 24px;
+}
+
+.line {
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 12px 0;
+}
+
+.priceCart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.priceCart p {
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.priceCart button {
+  background: none;
+  border: none;
+  font-family: "Inter";
+  font-weight: 300;
+  font-size: 14px;
 }
 
 /* Fordeler ved våre produkter */
