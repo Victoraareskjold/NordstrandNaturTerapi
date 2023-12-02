@@ -1,0 +1,354 @@
+:root {
+  box-sizing: border-box;
+  --primary: rgba(34, 98, 116, 1);
+  --primarylight: rgba(159, 212, 202, 1);
+  --primarydark: rgba(34, 80, 103, 1);
+  --primaryverylight: rgba(159, 212, 202, 0.3);
+  --black: rgba(39, 39, 39, 1);
+  --black76: rgba(39, 39, 39, 0.76);
+}
+
+@font-face {
+  font-family: "Buenard-Bold";
+  src: url(/fonts/Buenard-Bold.ttf);
+}
+@font-face {
+  font-family: "Buenard-Regular";
+  src: url(/fonts/Buenard-Regular.ttf);
+}
+@font-face {
+  font-family: "Inter";
+  src: url(/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+h1 {
+  font-family: "Buenard-Bold";
+  font-size: 64px;
+  line-height: 64px;
+  color: var(--black);
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  font-family: "Buenard-Bold";
+  font-size: 32px;
+  color: var(--black);
+  padding: 0;
+  margin: 0;
+}
+
+h3 {
+  font-family: "Inter";
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--black);
+  padding: 0;
+  margin: 0;
+}
+
+h4 {
+  font-family: "Buenard-Regular";
+  font-size: 20px;
+  color: var(--black);
+  padding: 0;
+  margin: 0;
+}
+
+h5 {
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--black);
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  font-family: "Inter";
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--black);
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 64px 80px 64px 80px;
+}
+
+.contentGap {
+  margin-bottom: 40px;
+}
+
+img {
+  object-fit: contain;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.navLogo {
+  height: 48px;
+  width: auto;
+}
+
+.navButtons {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  padding: 0;
+}
+
+ul,
+li,
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.navButton {
+  display: inline-block;
+  width: auto;
+  padding: 0 10px 0 10px;
+}
+
+.contactButton {
+  background-color: var(--primary);
+  border: 0;
+  padding: 12px 20px 12px 20px;
+  border-radius: 25px;
+  font-size: 16px;
+  color: white;
+}
+
+/* Hero styling */
+.heroSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.heroSection div {
+  width: 50%;
+}
+.heroSection img {
+  width: 45%;
+  max-width: 550px;
+}
+
+.heroSection h1 {
+  margin-bottom: 20px;
+}
+
+.heroSection p {
+  margin-bottom: 40px;
+}
+
+/* About us styling */
+.centerAlign {
+  text-align: center;
+  padding: 120px 0 120px 0;
+}
+
+.aboutSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.aboutSection div {
+  width: 45%;
+}
+.aboutSection img {
+  width: 45%;
+  max-width: 550px;
+}
+
+.aboutSection h3 {
+  margin-bottom: 4px;
+  width: 100%;
+}
+
+.aboutSection p {
+  width: 100%;
+}
+
+.textContainer {
+  width: 100%;
+}
+
+.aboutText {
+  text-align: start;
+}
+
+.aboutSection h3:not(:first-child) {
+  margin-top: 40px;
+}
+
+/* Behandlinger styling */
+.behandlinger {
+  max-width: 100%;
+  padding: 64px 0 64px 0;
+  text-align: center;
+  background-color: var(--primaryverylight);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.behandlinger h2 {
+  margin-bottom: 4px;
+  color: var(--primary);
+}
+
+.behandlingbody {
+  color: var(--primary);
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Sentrer kortene horisontalt */
+  align-items: center; /* Sentrer kortene vertikalt */
+  max-width: 1440px;
+  width: 100%;
+}
+
+.behandlingerCard {
+  overflow: hidden;
+  border-radius: 10px;
+  width: 290px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left; /* Justerer innholdet i containeren til venstre */
+}
+
+.behandlingerCard img {
+  width: 100%;
+}
+
+.cardText {
+  text-align: start;
+  overflow: hidden; /* Håndter tekstoppløsningen */
+}
+
+.alignment {
+  padding: 20px 16px;
+}
+
+.cardText p {
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  max-height: 82px;
+}
+
+.behandlingerCard button {
+  border: none;
+  border-radius: 5px;
+  background: rgba(159, 212, 202, 0.5);
+  color: var(--primarydark);
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 12px;
+  padding: 8px 16px;
+  align-self: flex-start;
+  margin-top: 20px;
+}
+
+.behandlingerCard button:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+.button:focus {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* Utvalgte produkter */
+.utvalgteContainer {
+  max-width: 100%;
+  padding: 64px 0 64px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.topContainer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1440px;
+  width: 100%;
+}
+
+/* Fordeler ved våre produkter */
+.fordeler {
+  max-width: 100%;
+  padding: 64px 0 64px 0;
+  text-align: center;
+  background-color: var(--primaryverylight);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fordeler h2 {
+  margin-bottom: 40px;
+  color: var(--primarydark);
+}
+
+.fordeler h5 {
+  margin-top: 32px;
+  color: var(--primarydark);
+}
+
+.fordelerContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.fordelCard {
+  background: white;
+  padding: 40px 32px 40px 32px;
+  border-radius: 10px;
+}
+
+/* Footer */
+.footer {
+  max-width: 100%;
+  padding: 64px 0 64px 0;
+  text-align: center;
+  background: var(--primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
