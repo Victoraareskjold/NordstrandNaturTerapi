@@ -8,104 +8,40 @@
   --black76: rgba(39, 39, 39, 0.76);
 }
 
-@font-face {
-  font-family: "Buenard-Bold";
-  src: url(/fonts/Buenard-Bold.ttf);
-}
-@font-face {
-  font-family: "Buenard-Regular";
-  src: url(/fonts/Buenard-Regular.ttf);
-}
-@font-face {
-  font-family: "Inter";
-  src: url(/fonts/Inter-VariableFont_slnt\,wght.ttf);
-}
-
-h1 {
-  font-family: "Buenard-Bold";
-  font-size: 64px;
-  line-height: 64px;
-  color: var(--black);
-  padding: 0;
-  margin: 0;
-}
-
-h2 {
-  font-family: "Buenard-Bold";
-  font-size: 32px;
-  color: var(--black);
-  padding: 0;
-  margin: 0;
-}
-
-h3 {
-  font-family: "Inter";
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--black);
-  padding: 0;
-  margin: 0;
-}
-
-h4 {
-  font-family: "Buenard-Regular";
-  font-size: 20px;
-  color: var(--black);
-  padding: 0;
-  margin: 0;
-  text-shadow: none;
-}
-
-h5 {
-  font-family: "Inter";
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--black);
-  padding: 0;
-  margin: 0;
-}
-
-p {
-  font-family: "Inter";
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-  color: var(--black);
-  padding: 0;
-  margin: 0;
-}
-
 body {
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
+  object-fit: none;
+  box-sizing: border-box;
 }
 
 section {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  padding: 64px 80px 64px 80px;
-}
-
-.contentGap {
-  margin-bottom: 40px;
+  width: 1440px;
 }
 
 img {
   object-fit: contain;
 }
 
+.contentGap {
+  margin-bottom: 40px;
+}
+
 /* Navbar styling */
 .navbar {
+  position: absolute;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding-top: 20px;
   padding-bottom: 20px;
-  max-width: 1440px;
+  max-width: 100%;
 }
 
 .navLogo {
@@ -145,17 +81,28 @@ a {
 /* Hero styling */
 .heroSection {
   display: flex;
+  justify-content: center; /* Sentrerer innholdet horisontalt */
+  align-items: center; /* Sentrerer innholdet vertikalt */
+  background: url(/images/background.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw; /* Dekker hele bredden av viewport */
+}
+
+.heroSectionContent {
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  max-width: 1440px;
+  width: 100% !important;
+  max-width: 1440px; /* Tilpasser bredden til containeren */
+  padding: 120px 0;
+  margin: auto; /* Sentrerer innholdet innenfor maks bredde */
 }
+
 .heroSection div {
   width: 50%;
-}
-.heroSection img {
-  width: 45%;
-  max-width: 550px;
 }
 
 .heroSection h1 {
@@ -170,8 +117,11 @@ a {
 .centerAlign {
   text-align: center;
   padding: 120px 0 120px 0;
-  max-width: 1440px;
   margin-top: -50px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1440px;
 }
 
 .aboutSection {
@@ -179,6 +129,7 @@ a {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  max-width: 1440px;
 }
 
 .aboutSection div {
@@ -212,7 +163,7 @@ a {
 
 /* Behandlinger styling */
 .behandlinger {
-  max-width: 100%;
+  width: 100vw;
   padding: 64px 0 64px 0;
   text-align: center;
   background-color: var(--primaryverylight);
@@ -367,7 +318,7 @@ a {
 
 /* Fordeler ved våre produkter */
 .fordeler {
-  max-width: 100%;
+  width: 100vw;
   padding: 64px 0 64px 0;
   text-align: center;
   background-color: var(--primaryverylight);
@@ -404,12 +355,17 @@ a {
 
 /* Footer */
 .footer {
-  max-width: 100%;
+  width: 100vw;
   padding: 64px 0 64px 0;
   text-align: center;
   background: var(--primary);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.rowGroup {
+  display: flex;
+  flex-direction: row;
 }

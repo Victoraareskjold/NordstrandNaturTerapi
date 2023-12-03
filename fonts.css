@@ -1,0 +1,66 @@
+@font-face {
+  font-family: "Buenard-Bold";
+  src: url(/fonts/Buenard-Bold.ttf);
+}
+@font-face {
+  font-family: "Buenard-Regular";
+  src: url(/fonts/Buenard-Regular.ttf);
+}
+@font-face {
+  font-family: "Inter";
+  src: url(/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+h1 {
+  font-family: "Buenard-Bold";
+  font-size: 64px;
+  line-height: 64px;
+  color: var(--black);
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  font-family: "Buenard-Bold";
+  font-size: 32px;
+  color: var(--black);
+  padding: 0;
+  margin: 0;
+}
+
+h3 {
+  font-family: "Inter";
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--black);
+  padding: 0;
+  margin: 0;
+}
+
+h4 {
+  font-family: "Buenard-Regular";
+  font-size: 20px;
+  color: var(--black);
+  padding: 0;
+  margin: 0;
+  text-shadow: none;
+}
+
+h5 {
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--black);
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  font-family: "Inter";
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--black);
+  padding: 0;
+  margin: 0;
+}

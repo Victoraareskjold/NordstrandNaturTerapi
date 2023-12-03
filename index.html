@@ -8,6 +8,9 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="fonts.css" />
+    <link rel="stylesheet" href="admin.html" />
+    <link rel="stylesheet" href="login.html" />
 
     <!-- Pages -->
   </head>
@@ -30,22 +33,25 @@
 
     <!-- Hero -->
     <section class="heroSection">
-      <div>
-        <h1>
-          Velkommen til <br />
-          Nordstrand Natur-Terapi
-        </h1>
-        <p>
-          Lorem ipsum dolor sit amet lorem ipsum Lorem ipsum dolor sit amet
-          lorem ipsum Lorem ipsum dolor sit amet lorem ipsum.
-        </p>
-        <button class="contactButton">Kontakt oss</button>
+      <div class="heroSectionContent">
+        <div>
+          <h1>
+            Velkommen til <br />
+            Nordstrand Natur-Terapi
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet lorem ipsum Lorem ipsum dolor sit amet
+            lorem ipsum Lorem ipsum dolor sit amet lorem ipsum.
+          </p>
+          <button class="contactButton">Kontakt oss</button>
+        </div>
+        <img class="omOssImage" src="/images/heroImage.png" alt="products" />
       </div>
-      <img class="omOssImage" src="/images/heroImage.png" alt="products" />
     </section>
 
     <!-- About -->
     <section class="centerAlign">
+      <div>
       <h2 class="contentGap">Om Nordstrand Natur-Terapi</h2>
       <div class="aboutSection">
         <div class="aboutText">
@@ -171,8 +177,8 @@
           <button><img src="" alt="" /></button>
         </div>
       </div>
-      <div class="productContainer">
-        <div class="productCard">
+      <div class="productContainer" id="product-container">
+        <!-- <div class="productCard">
           <img class="productImg" src="/images/produkter/product1.png" alt="" />
           <div class="infoContainer">
             <h4>Produkt #1</h4>
@@ -184,98 +190,7 @@
               </button>
             </div>
           </div>
-        </div>
-        <div class="productCard">
-          <img class="productImg" src="/images/produkter/product1.png" alt="" />
-          <div class="infoContainer">
-            <h4>Produkt #1</h4>
-            <div class="line"></div>
-            <div class="priceCart">
-              <p>279 ,-</p>
-              <button>
-                Legg til i handlekurv <img src="/images/Arrow 1.png" alt="" />
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="productCard">
-          <img class="productImg" src="/images/produkter/product1.png" alt="" />
-          <div class="infoContainer">
-            <h4>Produkt #1</h4>
-            <div class="line"></div>
-            <div class="priceCart">
-              <p>279 ,-</p>
-              <button>
-                Legg til i handlekurv <img src="/images/Arrow 1.png" alt="" />
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="productCard">
-          <img class="productImg" src="/images/produkter/product1.png" alt="" />
-          <div class="infoContainer">
-            <h4>Produkt #1</h4>
-            <div class="line"></div>
-            <div class="priceCart">
-              <p>279 ,-</p>
-              <button>
-                Legg til i handlekurv <img src="/images/Arrow 1.png" alt="" />
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="productCard">
-          <img class="productImg" src="/images/produkter/product1.png" alt="" />
-          <div class="infoContainer">
-            <h4>Produkt #1</h4>
-            <div class="line"></div>
-            <div class="priceCart">
-              <p>279 ,-</p>
-              <button>
-                Legg til i handlekurv <img src="/images/Arrow 1.png" alt="" />
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="productCard">
-          <img class="productImg" src="/images/produkter/product1.png" alt="" />
-          <div class="infoContainer">
-            <h4>Produkt #1</h4>
-            <div class="line"></div>
-            <div class="priceCart">
-              <p>279 ,-</p>
-              <button>
-                Legg til i handlekurv <img src="/images/Arrow 1.png" alt="" />
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="productCard">
-          <img class="productImg" src="/images/produkter/product1.png" alt="" />
-          <div class="infoContainer">
-            <h4>Produkt #1</h4>
-            <div class="line"></div>
-            <div class="priceCart">
-              <p>279 ,-</p>
-              <button>
-                Legg til i handlekurv <img src="/images/Arrow 1.png" alt="" />
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="productCard">
-          <img class="productImg" src="/images/produkter/product1.png" alt="" />
-          <div class="infoContainer">
-            <h4>Produkt #1</h4>
-            <div class="line"></div>
-            <div class="priceCart">
-              <p>279 ,-</p>
-              <button>
-                Legg til i handlekurv <img src="/images/Arrow 1.png" alt="" />
-              </button>
-            </div>
-          </div>
-        </div>
+        </div> -->
       </div>
     </section>
 
@@ -304,9 +219,24 @@
 
     <!-- Footer -->
     <section class="footer">
-      <div clas="columnGroup">
-        <img src="/images/logoHvitntt.png" alt="" />
+      <div clas="rowGroup">
+        <div class="group1">
+          <img src="/images/logoHvitntt.png" alt="" />
+        </div>
+        <div class="group2">
+          <img src="/images/logoHvitntt.png" alt="" />
+        </div>
+        <div class="group3">
+          <img src="/images/logoHvitntt.png" alt="" />
+        </div>
+        <div class="group4">
+          <img src="/images/logoHvitntt.png" alt="" />
+        </div>
       </div>
     </section>
+
+    <!-- Scipts -->
+    <script type="module" src="/firebase-config.js"></script>
+    <script type="module" src="/load-products.js"></script>
   </body>
 </html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <!-- Legg til link til CSS her om nødvendig -->
+  </head>
+  <body>
+    <h1>Produktadministrasjon</h1>
+
+    <form id="product-form">
+      <input type="text" id="navn" placeholder="Navn" required /><br />
+      <input type="number" id="pris" placeholder="Pris" required /><br />
+      <input type="text" id="bildeUrl" placeholder="Bilde URL" required /><br />
+      <textarea id="beskrivelse" placeholder="Beskrivelse" required></textarea
+      ><br />
+      <input
+        type="number"
+        id="lager"
+        placeholder="Antall på lager"
+        required
+      /><br />
+      <button type="submit">Legg til produkt</button>
+    </form>
+
+    <script type="module">
+      import {
+        getAuth,
+        onAuthStateChanged,
+      } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js";
+
+      const auth = getAuth();
+      onAuthStateChanged(auth, (user) => {
+        if (!user) {
+          // Ingen bruker er innlogget, omdiriger til innloggingssiden
+          window.location.href = "/login.html";
+        } else {
+          // Her kan du legge til ytterligere sjekker for å bekrefte at brukeren er en admin
+        }
+      });
+    </script>
+  </body>
+</html>
