@@ -5,18 +5,34 @@
     <title>Admin Login</title>
     <!-- Legg til link til CSS her -->
   </head>
-  <body>
-    <h2>Admin Innlogging</h2>
-    <form id="login-form">
-      <input type="email" id="email" placeholder="E-post" required /><br />
-      <input
-        type="password"
-        id="password"
-        placeholder="Passord"
-        required
-      /><br />
-      <button type="submit">Logg inn</button>
-    </form>
+  <body
+    style="
+      display: flex;
+      justify-content: center;
+      height: 50vh;
+      align-items: center;
+    "
+  >
+    <div>
+      <h2>Admin Innlogging</h2>
+      <form id="login-form">
+        <input
+          style="margin-bottom: 4px"
+          type="email"
+          id="email"
+          placeholder="E-post"
+          required
+        /><br />
+        <input
+          style="margin-bottom: 12px"
+          type="password"
+          id="password"
+          placeholder="Passord"
+          required
+        /><br />
+        <button type="submit">Logg inn</button>
+      </form>
+    </div>
 
     <script type="module" src="/firebase-config.js"></script>
     <script type="module" src="/login.js"></script>
