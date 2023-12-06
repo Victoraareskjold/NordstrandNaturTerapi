@@ -13,11 +13,19 @@ function loadProducts() {
     querySnapshot.forEach((doc) => {
       const product = doc.data();
       productsHTML += `
-        <a href="productShowcase.html?id=${doc.id}">
         <div class="productCard">
-          <img class="productImg" src="${product.image}" alt="${product.name}" />
+            <div class="productImgContainer">
+              <a href="productShowcase.html?id=${doc.id}">
+                <img class="productImg" src="${product.image}" alt="${product.name}" />
+                <div class="productOverlay">
+                  <button class="detailButton">Vis detaljer</button>
+                </div>
+            </div>
+          </a>
           <div class="infoContainer">
-            <h4>${product.name}</h4>
+            <a href="productShowcase.html?id=${doc.id}">
+              <h4>${product.name}</h4>
+            </a>
             <div class="line"></div>
             <div class="priceCart">
               <p>${product.price} kr</p>
@@ -27,7 +35,6 @@ function loadProducts() {
             </div>
           </div>
         </div>
-        </a>
       `;
     });
 

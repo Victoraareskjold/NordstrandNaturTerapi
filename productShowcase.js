@@ -33,6 +33,20 @@ if (productId) {
                       <h5 style="margin-bottom: 4px">Beskrivelse</h5>
                       <p>${product.description}</p>
                     </div>
+                    
+                    <div class="columnContainer">
+                      <h5 style="margin-bottom: 4px">Kategorier</h5>
+                      <p>${product.categories}</p>
+                    </div>
+
+                    <div class="columnContainer">
+                      <h5 style="margin-bottom: 4px">Ingredienser</h5>
+                      <p>${product.Ingredients}</p>
+                    </div>
+
+                    <div class="buttonContainer">
+                      <h5 style="margin-bottom: 4px">${product.price} kr - Legg til i handlekurv</h5>
+                    </div>
 
                   </div>
             `;

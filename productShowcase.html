@@ -11,20 +11,22 @@
   <body>
     <!-- Navbar -->
     <section class="navbar">
-      <a href="index.html">
-        <img
-          class="navLogo"
-          src="/images/nntLogo.png"
-          alt="Nordstrand NaturTerapi"
-        />
-      </a>
-      <ul class="navButtons">
-        <li class="navButton"><a href="#">lorem</a></li>
-        <li class="navButton"><a href="#">ipsum</a></li>
-        <li class="navButton"><a href="#">dolor</a></li>
-        <li class="navButton"><a href="#">sit</a></li>
-      </ul>
-      <button class="contactButton">Kontakt oss</button>
+      <div class="navbarContent">
+        <a href="index.html">
+          <img
+            class="navLogo"
+            src="/images/nntLogo.png"
+            alt="Nordstrand NaturTerapi"
+          />
+        </a>
+        <ul class="navButtons">
+          <li class="navButton"><a href="#">lorem</a></li>
+          <li class="navButton"><a href="#">ipsum</a></li>
+          <li class="navButton"><a href="#">dolor</a></li>
+          <li class="navButton"><a href="#">sit</a></li>
+        </ul>
+        <button class="contactButton">Kontakt oss</button>
+      </div>
     </section>
 
     <!-- Product showcase -->
@@ -33,6 +35,32 @@
         <!-- Produktinformasjonen vil bli lastet og vist her -->
         <!-- Produktinformasjonen vil bli lastet og vist her -->
         <!-- Produktinformasjonen vil bli lastet og vist her -->
+      </div>
+    </section>
+
+    <!-- Våre utvalgte produkter -->
+    <section class="utvalgteContainer">
+      <div class="topContainer">
+        <h2>Våre utvalgte produkter</h2>
+        <div>
+          <button><img src="" alt="" /></button>
+          <button><img src="" alt="" /></button>
+        </div>
+      </div>
+      <div class="productContainer" id="product-container">
+        <!-- <div class="productCard">
+          <img class="productImg" src="/images/produkter/product1.png" alt="" />
+          <div class="infoContainer">
+            <h4>Produkt #1</h4>
+            <div class="line"></div>
+            <div class="priceCart">
+              <p>279 ,-</p>
+              <button>
+                Legg til i handlekurv <img src="/images/Arrow 1.png" alt="" />
+              </button>
+            </div>
+          </div>
+        </div> -->
       </div>
     </section>
 
@@ -54,6 +82,9 @@
       </div>
     </section>
 
+    <!-- Scipts -->
+    <script type="module" src="/firebase-config.js"></script>
+    <script type="module" src="/load-products.js"></script>
     <script type="module" src="/productShowcase.js"></script>
   </body>
 </html>

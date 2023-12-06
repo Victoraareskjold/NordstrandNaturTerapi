@@ -35,13 +35,23 @@ img {
 
 /* Navbar styling */
 .navbar {
-  position: absolute;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 50;
+  background-color: white;
+  position: fixed;
+}
+
+.navbarContent {
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  max-width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  max-width: 1440px;
+  width: 100%;
 }
 
 .navLogo {
@@ -97,7 +107,7 @@ a {
   align-items: center;
   width: 100% !important;
   max-width: 1440px; /* Tilpasser bredden til containeren */
-  padding: 120px 0;
+  padding: 196px 0 120px 0;
   margin: auto; /* Sentrerer innholdet innenfor maks bredde */
 }
 
@@ -138,6 +148,7 @@ a {
 .aboutSection img {
   width: 45%;
   max-width: 550px;
+  border-radius: 2px;
 }
 
 .aboutSection h3 {
@@ -189,13 +200,13 @@ a {
   align-items: center;
   max-width: 1440px;
   width: 100%;
-  gap: 40px;
+  gap: 20px;
 }
 
 .behandlingerCard {
   overflow: hidden;
-  border-radius: 10px;
-  width: 330px;
+  border-radius: 2px;
+  width: 345px;
   background: white;
   display: flex;
   flex-direction: column;
@@ -205,7 +216,7 @@ a {
 
 .behandlingerCard img {
   width: 100%;
-  height: 170px;
+  height: 160px;
   object-fit: cover;
 }
 
@@ -252,6 +263,7 @@ a {
 /* Utvalgte produkter */
 .utvalgteContainer {
   max-width: 1440px;
+  width: 100%;
   padding: 64px 0 64px 0;
   text-align: center;
   display: flex;
@@ -259,6 +271,7 @@ a {
   justify-content: center;
   align-items: center;
   gap: 40px;
+  overflow-x: hidden;
 }
 
 .productContainer {
@@ -278,16 +291,59 @@ a {
 }
 
 .productCard {
-  overflow: hidden;
-  min-width: 256px;
+  position: relative;
   text-align: left;
+}
+
+.productImgContainer:hover .productOverlay {
+  display: block;
+}
+
+.infoContainer {
+  margin-top: 24px;
+}
+
+.productOverlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 350px;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.3
+  ); /* Svart overlay med litt gjennomsiktighet */
+  z-index: 2;
+}
+
+.detailButton {
+  position: absolute;
+  top: 50%; /* Sentrerer vertikalt */
+  left: 50%; /* Sentrerer horisontalt */
+  transform: translate(-50%, -50%); /* Justerer for nøyaktig sentrering */
+  padding: 12px 24px;
+  background: none;
+  border: 1.5px solid white;
+  cursor: pointer;
+  color: white;
+  border-radius: 100px;
+}
+
+.productImgContainer {
+  position: relative;
+}
+
+.productImgContainer:hover .productOverlay {
+  display: block;
 }
 
 .productImg {
   width: 100%;
   height: 350px;
   object-fit: cover;
-  margin-bottom: 24px;
 }
 
 .line {
@@ -350,7 +406,7 @@ a {
 .fordelCard {
   background: white;
   padding: 40px 32px 40px 32px;
-  border-radius: 10px;
+  border-radius: 2px;
 }
 
 /* Footer */
