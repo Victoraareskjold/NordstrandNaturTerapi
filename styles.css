@@ -1,9 +1,9 @@
 :root {
   box-sizing: border-box;
-  --primary: rgba(34, 98, 116, 1);
+  --primary: rgba(42, 69, 141, 1);
   --primarylight: rgba(159, 212, 202, 1);
   --primarydark: rgba(34, 80, 103, 1);
-  --primaryverylight: rgba(159, 212, 202, 0.3);
+  --primaryverylight: rgba(127, 161, 255, 0.25);
   --black: rgba(39, 39, 39, 1);
   --black76: rgba(39, 39, 39, 0.76);
 }
@@ -123,6 +123,10 @@ a {
   margin-bottom: 40px;
 }
 
+.omOssImage {
+  width: 50%;
+}
+
 /* About us styling */
 .centerAlign {
   text-align: center;
@@ -196,7 +200,7 @@ a {
 .cardContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Sentrer kortene horisontalt */
+  justify-content: left;
   align-items: center;
   max-width: 1440px;
   width: 100%;
@@ -234,13 +238,14 @@ a {
   font-size: 14px;
   font-weight: 300;
   line-height: 20px;
-  max-height: 82px;
+  max-height: 80px;
+  overflow: hidden;
 }
 
-.behandlingerCard button {
+.primaryBtn {
   border: none;
   border-radius: 5px;
-  background: rgba(159, 212, 202, 0.5);
+  background: rgba(127, 161, 255, 0.25);
   color: var(--primarydark);
   font-family: "Inter";
   font-weight: 500;
@@ -250,15 +255,136 @@ a {
   margin-top: 20px;
 }
 
-.behandlingerCard button:hover {
+.primaryBtn:hover {
+  background-color: var(--primary);
+  color: white;
+  cursor: pointer;
+}
+
+.primaryBtn:focus {
   background-color: var(--primary);
   color: white;
 }
 
-.button:focus {
+.simpleBtn {
+  background: none;
+  border: none;
+  color: var(--primary);
+  padding: 0;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.simpleBtn:hover {
+  cursor: pointer;
+}
+
+.primaryBtn:focus {
   background-color: var(--primary);
   color: white;
 }
+
+/* Booking */
+/* .booking {
+  width: 100vw;
+  padding: 64px 0 64px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bookingSection {
+  max-width: 1440px;
+  width: 100%;
+} */
+
+/* Booking modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 51;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: auto auto;
+  padding: 32px;
+  border: 4px solid var(--primary);
+  width: 50%;
+  border-radius: 10px;
+}
+
+.tilbakeBtn {
+  color: var(--primary);
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.tilbakeBtn:hover {
+  cursor: pointer;
+}
+
+/* Kalender og dag-styling */
+#kalender {
+  display: flex;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  margin-top: 32px;
+}
+
+.kalender-dag {
+  flex-grow: 1;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.kalender-dag div {
+  margin-bottom: 5px;
+}
+
+/* Aktive dager (Torsdager) */
+.kalender-dag.aktiv {
+  background-color: #e0ffe0; /* Lys grønn bakgrunn */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: left;
+}
+
+.kalender-dag.aktiv:hover {
+  background-color: #b2ffb2; /* Mørkere grønn ved hover */
+}
+
+/* Inaktive dager */
+.kalender-dag.inaktiv {
+  background-color: #e0e0e0; /* Lys grå bakgrunn */
+  color: #a0a0a0; /* Lysere tekst for inaktive dager */
+  text-align: left;
+}
+
+/* Tilleggsklasser for spesifikke stiler, om nødvendig */
+/* .din-ekstra-klasse-1 { ... } */
+/* .din-ekstra-klasse-2 { ... } */
+/* .din-ekstra-klasse-3 { ... } */
+
+/* Stiler for navigasjonsknapper */
+/* .navigasjonsknapp { ... } */
+/* .navigasjonsknapp:hover { ... } */
+
+/* Stil for 'I dag'-knappen */
+/* .idag-knapp { ... } */
+/* .idag-knapp:hover { ... } */
 
 /* Utvalgte produkter */
 .utvalgteContainer {

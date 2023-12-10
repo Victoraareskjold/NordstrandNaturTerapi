@@ -24,10 +24,10 @@
         <img class="navLogo" src="/images/nntLogo.png" alt="Nordstrand NaturTerapi" />
       </a>
       <ul class="navButtons">
-        <li class="navButton"><a href="#">lorem</a></li>
-        <li class="navButton"><a href="#">ipsum</a></li>
-        <li class="navButton"><a href="#">dolor</a></li>
-        <li class="navButton"><a href="#">sit</a></li>
+        <li class="navButton"><a href="#">Om oss</a></li>
+        <li class="navButton"><a href="#">Behandlinger</a></li>
+        <li class="navButton"><a href="#">Våre produkter</a></li>
+        <li class="navButton"><a href="#">Kontakt oss</a></li>
       </ul>
       <button class="contactButton">Kontakt oss</button>
     </div>
@@ -47,7 +47,7 @@
         </p>
         <button class="contactButton">Kontakt oss</button>
       </div>
-      <img class="omOssImage" src="/images/heroImage.png" alt="products" />
+      <img class="omOssImage" src="/images/profilBilde.jpeg" alt="products" />
     </div>
   </section>
 
@@ -90,7 +90,7 @@
       </p>
     </div>
     <div class="cardContainer">
-      <div class="behandlingerCard">
+      <!-- <div class="behandlingerCard">
         <img src="/images/behandlinger/akupressur.png" alt="" />
         <div class="alignment">
           <div class="cardText">
@@ -109,69 +109,41 @@
           </div>
           <button>Les mer..</button>
         </div>
-      </div>
-      <div class="behandlingerCard">
-        <img src="/images/behandlinger/akupressur.png" alt="" />
-        <div class="alignment">
-          <div class="cardText">
-            <h3>Akupressur</h3>
-            <p>
-              Akupressur er en japansk trykketeknikk basert på taoistisk
-              tankegang og tradisjonell kinesisk medisin. Prinsippet for
-              behandlingen er det sammen som ved akupunktur; man søker å
-              gjenopprette balansen i meridiansystemet, men uten nåler. Du
-              ligger komfortabelt på benken med klærne på og teppe over deg,
-              og jeg bruker hender og fingre til å trykke på
-              akupunkturpunkter. Behandlingen blir tilpasset til ditt behov,
-              enten det er stress, emosjonelle problemer, stive muskler og
-              ledd, fordøyelsesplager, søvnproblemer eller annet.
-            </p>
-          </div>
-          <button>Les mer..</button>
-        </div>
-      </div>
-      <div class="behandlingerCard">
-        <img src="/images/behandlinger/akupressur.png" alt="" />
-        <div class="alignment">
-          <div class="cardText">
-            <h3>Akupressur</h3>
-            <p>
-              Akupressur er en japansk trykketeknikk basert på taoistisk
-              tankegang og tradisjonell kinesisk medisin. Prinsippet for
-              behandlingen er det sammen som ved akupunktur; man søker å
-              gjenopprette balansen i meridiansystemet, men uten nåler. Du
-              ligger komfortabelt på benken med klærne på og teppe over deg,
-              og jeg bruker hender og fingre til å trykke på
-              akupunkturpunkter. Behandlingen blir tilpasset til ditt behov,
-              enten det er stress, emosjonelle problemer, stive muskler og
-              ledd, fordøyelsesplager, søvnproblemer eller annet.
-            </p>
-          </div>
-          <button>Les mer..</button>
-        </div>
-      </div>
-      <div class="behandlingerCard">
-        <img src="/images/behandlinger/akupressur.png" alt="" />
-        <div class="alignment">
-          <div class="cardText">
-            <h3>Akupressur</h3>
-            <p>
-              Akupressur er en japansk trykketeknikk basert på taoistisk
-              tankegang og tradisjonell kinesisk medisin. Prinsippet for
-              behandlingen er det sammen som ved akupunktur; man søker å
-              gjenopprette balansen i meridiansystemet, men uten nåler. Du
-              ligger komfortabelt på benken med klærne på og teppe over deg,
-              og jeg bruker hender og fingre til å trykke på
-              akupunkturpunkter. Behandlingen blir tilpasset til ditt behov,
-              enten det er stress, emosjonelle problemer, stive muskler og
-              ledd, fordøyelsesplager, søvnproblemer eller annet.
-            </p>
-          </div>
-          <button>Les mer..</button>
-        </div>
-      </div>
+      </div> -->
     </div>
   </section>
+
+  <!-- Booking -->
+  <!-- <section class="booking">
+    <div class="bookingSection">
+      <h2>Book en time hos oss</h2>
+    </div>
+  </section> -->
+
+  <!-- Booking modal -->
+  <div id="bookingModal" class="modal">
+    <div class="modal-content">
+      <button class="tilbakeBtn" onclick="closeModal()">Lukk</button>
+      <h2>Book en time</h2>
+      <!-- 
+      <div id="velgKlinikk">
+        <button id="mossBtn">Moss</button>
+        <button id="osloBtn">Nordstrand</button>
+      </div>
+
+      <div id="kalenderVisning" style="display:none;">
+        <div>
+          <button id="forrigeUke">Forrige uke</button>
+          <button id="nesteUke">Neste uke</button>
+          <button id="iDag">I dag</button>
+        </div>
+        <div id="kalender"></div> -->
+
+      <iframe style="width: 100%; height: 750px;" frameborder="0"
+        src="https://system.easypractice.net/book/nordstrand-naturterapi"></iframe>
+    </div>
+  </div>
+  </div>
 
   <!-- Våre utvalgte produkter -->
   <section class="utvalgteContainer">
@@ -243,6 +215,22 @@
   <!-- Scipts -->
   <script type="module" src="/firebase-config.js"></script>
   <script type="module" src="/load-products.js"></script>
+  <script type="module" src="/load-behandlinger.js"></script>
+  <script type="module">
+    import { visKalender } from '/modal-functions.js';
+
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById('mossBtn').addEventListener('click', function () {
+        visKalender('Moss');
+      });
+
+      document.getElementById('osloBtn').addEventListener('click', function () {
+        visKalender('Nordstrand');
+      });
+    });
+  </script>
+  <script src="https://system.easypractice.net/js/templates/onlinebook_iframe.js"></script>
+
 </body>
 
 </html>
