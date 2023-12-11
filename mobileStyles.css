@@ -1,0 +1,255 @@
+/* responsive.css */
+
+/* Media query for mobilskjermer, typisk mindre enn 768px */
+@media only screen and (max-width: 768px) {
+  @font-face {
+    font-family: "Buenard-Bold";
+    src: url(/fonts/Buenard-Bold.ttf);
+  }
+  @font-face {
+    font-family: "Buenard-Regular";
+    src: url(/fonts/Buenard-Regular.ttf);
+  }
+  @font-face {
+    font-family: "Inter";
+    src: url(/fonts/Inter-VariableFont_slnt\,wght.ttf);
+  }
+
+  h1 {
+    font-family: "Buenard-Bold";
+    font-size: 32px;
+    line-height: 32px;
+    color: var(--black);
+    padding: 0;
+    margin: 0;
+  }
+
+  h2 {
+    font-family: "Buenard-Bold";
+    font-size: 26px;
+    color: var(--black);
+    padding: 0;
+    margin: 0;
+  }
+
+  h3 {
+    font-family: "Inter";
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--black);
+    padding: 0;
+    margin: 0;
+  }
+
+  h4 {
+    font-family: "Buenard-Regular";
+    font-size: 20px;
+    color: var(--black);
+    padding: 0;
+    margin: 0;
+    text-shadow: none;
+  }
+
+  h5 {
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--black);
+    padding: 0;
+    margin: 0;
+  }
+
+  h6 {
+    font-family: "Buenard-Bold";
+    font-size: 24px;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 32px;
+  }
+
+  p {
+    font-family: "Inter";
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--black);
+    padding: 0;
+    margin: 0;
+  }
+
+  .p2 {
+    font-family: "Inter";
+    font-size: 14px;
+    line-height: 14 * 1.5px;
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  body {
+    /* Tilpasser body-stilen for mobilvisning */
+    flex-direction: column;
+    align-items: stretch;
+    box-sizing: border-box;
+  }
+
+  .hamburger {
+    display: block; /* Viser hamburgerikonet */
+  }
+
+  .navButtons {
+    display: none; /* Skjuler navigasjonslenkene */
+    flex-direction: column;
+    position: absolute;
+    background-color: white;
+    top: 60px; /* Juster etter behov */
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navButton {
+    margin: 10px 0;
+  }
+
+  /* Viser navigasjonslenker når hamburgermenyen er aktiv */
+  .nav-active {
+    display: flex;
+    padding: 12px 20px;
+    box-sizing: border-box;
+  }
+
+  .navbar {
+    padding: 12px 20px;
+    box-sizing: border-box;
+  }
+
+  .navbarContent {
+    display: flex;
+    flex-direction: row !important;
+    width: 100% !important;
+  }
+
+  .contactButton {
+    display: none;
+  }
+
+  .heroSectionContent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 120px 20px 48px 20px;
+    gap: 32px;
+  }
+
+  .heroSectionContent div,
+  .heroSectionContent img {
+    width: 100%;
+  }
+
+  .centerAlign {
+    width: 100%;
+    padding: 48px 20px;
+    box-sizing: border-box;
+    text-align: left;
+  }
+
+  .aboutSection img {
+    margin-top: 40px;
+    width: 100%;
+  }
+
+  .behandlinger {
+    width: 100%;
+    padding: 48px 20px;
+    box-sizing: border-box;
+  }
+
+  .utvalgteContainer {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 48px 20px;
+  }
+
+  .infoContainer {
+    text-align: left;
+  }
+
+  .topContainer {
+    display: flex;
+    flex-direction: row !important;
+  }
+
+  .fordeler {
+    width: 100%;
+    padding: 48px 20px;
+    box-sizing: border-box;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .rowGroup {
+    flex-direction: column;
+    width: 100%;
+    padding: 48px 20px;
+    box-sizing: border-box;
+  }
+
+  .navbarContent,
+  .heroSectionContent,
+  .aboutSection,
+  .kontaktContent,
+  .utvalgteContainer,
+  .fordelerContainer {
+    /* Gjør layouten mer lineær for mindre skjermer */
+    flex-direction: column;
+  }
+
+  .navbarContent,
+  .heroSectionContent,
+  .aboutSection div,
+  .kontaktContent div,
+  .productContainer,
+  .rowGroup {
+    /* Justerer bredden for å passe til mindre skjermer */
+    width: 100%;
+  }
+
+  .navButtons,
+  .topContainer {
+    /* Gjør navigasjon og topContainer mer responsive */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navButton,
+  .productCard,
+  .group1,
+  .group2,
+  .group3,
+  .group4 {
+    /* Justerer elementer til full bredde for enklere tilgang */
+    width: 100%;
+    text-align: left;
+  }
+
+  .omOssImage,
+  .mapStyle {
+    /* Justerer bilder for å være mer responsive */
+    width: 100%;
+    height: auto;
+  }
+
+  .cardContainer {
+    /* Justerer layouten til kortbeholderen */
+    justify-content: center;
+    gap: 20px;
+  }
+
+  /* Legg til ytterligere stiler her for å tilpasse for mobilvisning */
+}

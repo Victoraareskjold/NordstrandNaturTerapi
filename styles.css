@@ -8,9 +8,23 @@
   --black76: rgba(39, 39, 39, 0.76);
 }
 
+@font-face {
+  font-family: "Buenard-Bold";
+  src: url(/fonts/Buenard-Bold.ttf);
+}
+@font-face {
+  font-family: "Buenard-Regular";
+  src: url(/fonts/Buenard-Regular.ttf);
+}
+@font-face {
+  font-family: "Inter";
+  src: url(/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+
 body {
   padding: 0;
   margin: 0;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,6 +55,8 @@ img {
   z-index: 50;
   background-color: white;
   position: fixed;
+
+  box-shadow: 0 4px 80px rgba(0, 0, 0, 0.1); /* Skyggeeffekt */
 }
 
 .navbarContent {
@@ -57,6 +73,21 @@ img {
 .navLogo {
   height: 48px;
   width: auto;
+}
+
+.navLogoLink {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 .navButtons {
@@ -77,6 +108,7 @@ a {
   display: inline-block;
   width: auto;
   padding: 0 10px 0 10px;
+  align-self: center;
 }
 
 .contactButton {
@@ -131,7 +163,6 @@ a {
 .centerAlign {
   text-align: center;
   padding: 120px 0 120px 0;
-  margin-top: -50px;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -194,6 +225,7 @@ a {
 }
 
 .behandlingbody {
+  max-width: 420px;
   color: var(--primary);
 }
 
@@ -204,13 +236,14 @@ a {
   align-items: center;
   max-width: 1440px;
   width: 100%;
-  gap: 20px;
+  gap: 40px;
+  row-gap: 60px;
 }
 
 .behandlingerCard {
   overflow: hidden;
   border-radius: 2px;
-  width: 345px;
+  width: 330px;
   background: white;
   display: flex;
   flex-direction: column;
@@ -220,7 +253,7 @@ a {
 
 .behandlingerCard img {
   width: 100%;
-  height: 160px;
+  height: 140px;
   object-fit: cover;
 }
 
@@ -229,12 +262,16 @@ a {
   overflow: hidden; /* Håndter tekstoppløsningen */
 }
 
+/* .cardText h3 {
+  min-height: 48px;
+} */
+
 .alignment {
   padding: 20px 16px;
 }
 
 .cardText p {
-  margin-top: 4px;
+  margin-top: 12px;
   font-size: 14px;
   font-weight: 300;
   line-height: 20px;
@@ -246,10 +283,10 @@ a {
   border: none;
   border-radius: 5px;
   background: rgba(127, 161, 255, 0.25);
-  color: var(--primarydark);
+  color: var(--primary);
   font-family: "Inter";
-  font-weight: 500;
-  font-size: 12px;
+  font-weight: 600;
+  font-size: 14px;
   padding: 8px 16px;
   align-self: flex-start;
   margin-top: 20px;
@@ -419,6 +456,7 @@ a {
 .productCard {
   position: relative;
   text-align: left;
+  width: 330px;
 }
 
 .productImgContainer:hover .productOverlay {
@@ -501,38 +539,143 @@ a {
 /* Fordeler ved våre produkter */
 .fordeler {
   width: 100vw;
-  padding: 64px 0 64px 0;
   text-align: center;
   background-color: var(--primaryverylight);
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 64px 0;
 }
 
 .fordeler h2 {
-  margin-bottom: 40px;
-  color: var(--primarydark);
+  margin-bottom: 24px;
+  color: var(--primary);
 }
 
 .fordeler h5 {
-  margin-top: 32px;
-  color: var(--primarydark);
+  color: var(--primary);
 }
 
 .fordelerContainer {
   display: flex;
-  flex-direction: row;
-  gap: 32px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
   align-items: center;
   justify-content: center;
+  background: white;
+  border-radius: 10px;
+  box-sizing: border-box !important;
 }
 
 .fordelCard {
-  background: white;
-  padding: 40px 32px 40px 32px;
+  width: 100%;
   border-radius: 2px;
+}
+
+.kontaktContent {
+  display: flex;
+  flex-direction: row;
+  max-width: 1440px;
+  width: 100%;
+  align-items: flex-start;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  min-height: 450px;
+  height: 100%;
+}
+
+.mapStyle {
+  display: flex;
+  min-height: 450px;
+
+  height: 100%;
+  width: 50%;
+  object-fit: cover;
+}
+
+.kontaktInfo {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 50%;
+  padding: 40px 20px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.sendbtncontainer {
+  display: flex;
+  width: 100%;
+  justify-content: left;
+  align-items: end;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px;
+}
+
+.inputContainer {
+  position: relative;
+  flex-basis: calc(50% - 10px); /* Juster bredden her */
+  margin-bottom: 32px;
+}
+
+.inputContainer.fullwidth {
+  flex-basis: 100%;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1.5px solid #999;
+  padding: 6px 0 12px 0;
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--black);
+}
+
+textarea {
+  resize: vertical;
+}
+
+label {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  transition: 0.3s;
+  pointer-events: none;
+  color: #999;
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 500;
+}
+
+input:focus + label,
+textarea:focus + label,
+input:not(:placeholder-shown) + label,
+textarea:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 0px;
+  font-size: 12px;
+  color: var(--primary);
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 600;
+}
+
+input:focus,
+textarea:focus {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid var(--primary);
 }
 
 /* Footer */
@@ -550,4 +693,18 @@ a {
 .rowGroup {
   display: flex;
   flex-direction: row;
+  max-width: 1440px;
+  justify-content: space-between;
+  width: 100%;
+  gap: 64px;
+}
+
+.group1,
+.group2,
+.group3,
+.group4 {
+  text-align: left;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }

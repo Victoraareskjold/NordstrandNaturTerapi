@@ -10,8 +10,12 @@
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="fonts.css" />
+  <link rel="stylesheet" href="mobileStyles.css">
   <link rel="stylesheet" href="admin.html" />
   <link rel="stylesheet" href="login.html" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
   <!-- Pages -->
 </head>
@@ -20,16 +24,18 @@
   <!-- Navbar -->
   <section class="navbar">
     <div class="navbarContent">
-      <a href="index.html">
-        <img class="navLogo" src="/images/nntLogo.png" alt="Nordstrand NaturTerapi" />
+      <a href="index.html" class="navLogoLink">
+        <img class="navLogo" src="/images/profilBilde.jpeg" alt="Nordstrand NaturTerapi" />
+        <p>Nordstrand Naturterapi</p>
       </a>
-      <ul class="navButtons">
+      <button class="hamburger" id="hamburger">&#9776;</button> <!-- Hamburger Icon -->
+      <ul class="navButtons" id="navButtons">
         <li class="navButton"><a href="#">Om oss</a></li>
         <li class="navButton"><a href="#">Behandlinger</a></li>
         <li class="navButton"><a href="#">Våre produkter</a></li>
         <li class="navButton"><a href="#">Kontakt oss</a></li>
+        <button class="contactButton">Kontakt oss</button>
       </ul>
-      <button class="contactButton">Kontakt oss</button>
     </div>
   </section>
 
@@ -38,12 +44,12 @@
     <div class="heroSectionContent">
       <div>
         <h1>
-          Velkommen til <br />
-          Nordstrand Natur-Terapi
+          Ansvar for egen helse
         </h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus congue leo ac libero laoreet eleifend.
-          Nulla facilisi.
+          Velkommen til oss i Nordstrand Naturterapi. Vi tilbyr behandlinger og produkter <br> som er en naturlig
+          tilnærming
+          til bedre helse!
         </p>
         <button class="contactButton">Kontakt oss</button>
       </div>
@@ -85,7 +91,7 @@
     <div class="contentGap">
       <h2>Våre behandlinger</h2>
       <p class="behandlingbody">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Vivamus congue leo ac libero laoreet eleifend.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus congue leo ac libero laoreet eleifend.
         Nulla facilisi.
       </p>
     </div>
@@ -171,43 +177,80 @@
     </div>
   </section>
 
-  <!-- Fordeler ved våre produkter -->
+  <!-- Kontakt seksjon -->
   <section class="fordeler">
-    <h2>Fordeler ved våre produkter</h2>
-    <div class="fordelerContainer">
-      <div class="fordelCard">
-        <img src="/images/mdi_hand-truck.png" alt="" />
-        <h5>Gratis levering</h5>
+    <div class="kontaktContent">
+      <div class="kontaktInfo">
+        <h2>Kontakt oss</h2>
+        <form class="fordelerContainer" id="contact-form">
+          <div class="row">
+            <div class="inputContainer">
+              <input type="text" id="firstName" name="from_name" placeholder=" " required>
+              <label for="firstName">Fornavn</label>
+            </div>
+            <div class="inputContainer">
+              <input type="text" id="lastName" name="last_name" placeholder=" " required>
+              <label for="lastName">Etternavn</label>
+            </div>
+          </div>
+
+          <!-- Mobilnummer og E-post på samme rad -->
+          <div class="row">
+            <div class="inputContainer">
+              <input type="tel" id="mobileNumber" name="mobile_number" placeholder=" " required>
+              <label for="mobileNumber">Mobilnummer</label>
+            </div>
+            <div class="inputContainer">
+              <input type="email" id="email" name="reply_to" placeholder=" " required>
+              <label for="email">E-post</label>
+            </div>
+          </div>
+
+          <!-- Beskrivelse på en egen rad -->
+          <div class="row">
+            <div class="inputContainer fullwidth">
+              <textarea id="description" name="message" placeholder=" " required></textarea>
+              <label for="description">Beskrivelse</label>
+            </div>
+          </div>
+
+          <!-- Submit btn -->
+          <div class="sendbtncontainer">
+            <button class="contactButton" type="submit">
+              <p style="color: white;">send inn</p>
+            </button>
+          </div>
+        </form>
+
       </div>
-      <div class="fordelCard">
-        <img src="/images/mdi_hand-truck.png" alt="" />
-        <h5>Gratis levering</h5>
-      </div>
-      <div class="fordelCard">
-        <img src="/images/mdi_hand-truck.png" alt="" />
-        <h5>Gratis levering</h5>
-      </div>
-      <div class="fordelCard">
-        <img src="/images/mdi_hand-truck.png" alt="" />
-        <h5>Gratis levering</h5>
-      </div>
+      <div id="map" class="mapStyle"></div>
     </div>
   </section>
 
   <!-- Footer -->
   <section class="footer">
-    <div clas="rowGroup">
+    <div class="rowGroup">
       <div class="group1">
-        <img src="/images/logoHvitntt.png" alt="" />
+        <img style="height: 64px; width: 64px; margin-bottom: 20px; border-radius: 100px;"
+          src="/images/profilBilde.jpeg" alt="logo">
+        <p class="p2" style="color: white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus congue leo
+          ac libero laoreet eleifend. Nulla facilisi.</p>
       </div>
-      <div class="group2">
-        <img src="/images/logoHvitntt.png" alt="" />
+      <div class=" group2">
+        <h6 style="color: white;">Kontakt oss</h6>
+        <a href="https://www.facebook.com/people/Nordstrand-Naturterapi/100063478213934/">
+          <p class="p2" style="color: white;">Facebook</p>
+        </a>
+        <a href="tel:91664254">
+          <p class="p2" style="color: white;">Ring oss</p>
+        </a>
+        <a href="mail:post@nordstrandnaturterapi.no">
+          <p class="p2" style="color: white;">Send oss en mail</p>
+        </a>
       </div>
       <div class="group3">
-        <img src="/images/logoHvitntt.png" alt="" />
       </div>
       <div class="group4">
-        <img src="/images/logoHvitntt.png" alt="" />
       </div>
     </div>
   </section>
@@ -230,6 +273,65 @@
     });
   </script>
   <script src="https://system.easypractice.net/js/templates/onlinebook_iframe.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var map = L.map('map').setView([59.7010046, 10.757933], 9); // Bruk dine egne koordinater og zoom-nivå
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '© OpenStreetMap contributors'
+      }).addTo(map);
+
+      L.marker([59.8819071, 10.7837266]).addTo(map)
+        .bindPopup('Nordstrand Naturterapi Holtet.')
+      L.marker([59.4331395, 10.6408912]).addTo(map)
+        .bindPopup('Nordstrand Naturterapi Moss.')
+
+    });
+  </script>
+
+  <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("j6e8_Zwsr9P3zzsc_"); // Erstatt "your_user_id" med din EmailJS bruker-ID
+    })();
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("j6e8_Zwsr9P3zzsc_"); // Erstatt "your_user_id" med din EmailJS bruker-ID
+    })();
+
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      console.log('Form submitted'); // Bekrefter at skjemaet blir sendt
+
+      var submitButton = document.querySelector('.contactButton');
+      submitButton.disabled = true; // Deaktiverer send-knappen
+
+      emailjs.sendForm('service_bjuivwn', 'template_4a8ae9c', this)
+        .then(function (response) {
+          console.log('SUCCESS!', response);
+          // Tilbakemelding til brukeren etter suksess
+          alert('Skjema sendt!'); // Viser en alert-boks til brukeren
+          document.getElementById('contact-form').reset(); // Tømmer skjemaet
+        }, function (error) {
+          console.log('FAILED...', error);
+          // Håndter eventuelle feil
+          submitButton.disabled = false; // Gjør knappen klikkbar igjen ved feil
+        });
+    });
+  </script>
+  <script>
+    document.getElementById('hamburger').addEventListener('click', function () {
+      var nav = document.getElementById('navButtons');
+      if (nav.classList.contains('nav-active')) {
+        nav.classList.remove('nav-active');
+      } else {
+        nav.classList.add('nav-active');
+      }
+    });
+  </script>
 
 </body>
 
