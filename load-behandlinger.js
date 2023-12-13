@@ -19,7 +19,7 @@ onSnapshot(behandlingerRef, (querySnapshot) => {
           <div class="cardText">
             <h3>${behandling.name}</h3>
             <p>${behandling.description}</p>
-            <a href=""><button class="simpleBtn">Les mer..</button></a>
+            <a href="behandlingerShowcase.html?id=${doc.id}"><button class="simpleBtn">Les mer..</button></a>
           </div>
           <button class="primaryBtn bestillTimeBtn">Bestill time</button>
         </div>

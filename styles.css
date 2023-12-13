@@ -176,6 +176,7 @@ a {
 
 .omOssImage {
   width: 50%;
+  border-radius: 100%;
 }
 
 /* About us styling */
