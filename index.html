@@ -24,23 +24,23 @@
   <!-- Navbar -->
   <section class="navbar">
     <div class="navbarContent">
-      <a href="index.html" class="navLogoLink">
+      <a href="#hero" class="navLogoLink">
         <img class="navLogo" src="/images/profilBilde.jpeg" alt="Nordstrand NaturTerapi" />
         <p>Nordstrand Naturterapi</p>
       </a>
       <button class="hamburger" id="hamburger">&#9776;</button> <!-- Hamburger Icon -->
       <ul class="navButtons" id="navButtons">
-        <li class="navButton"><a href="#">Om oss</a></li>
-        <li class="navButton"><a href="#">Behandlinger</a></li>
-        <li class="navButton"><a href="#">Våre produkter</a></li>
-        <li class="navButton"><a href="#">Kontakt oss</a></li>
-        <button class="contactButton">Kontakt oss</button>
+        <li class="navButton"><a href="#omoss" class="navLink">Om oss</a></li>
+        <li class="navButton"><a href="#behandlinger" class="navLink">Behandlinger</a></li>
+        <li class="navButton"><a href="#produkter" class="navLink">Våre produkter</a></li>
+        <li class="navButton"><a href="#kontakt" class="navLink">Kontakt oss</a></li>
+        <button class="contactButton" onclick="location.href='#behandlinger'">Book time</button>
       </ul>
     </div>
   </section>
 
   <!-- Hero -->
-  <section class="heroSection">
+  <section id="hero" class="heroSection">
     <div class="heroSectionContent">
       <div>
         <h1>
@@ -51,14 +51,14 @@
           tilnærming
           til bedre helse!
         </p>
-        <button class="contactButton">Kontakt oss</button>
+        <button class="contactButton" onclick="location.href='#behandlinger'">Book time</button>
       </div>
       <img class="omOssImage" src="/images/profilBilde.jpeg" alt="products" />
     </div>
   </section>
 
   <!-- About -->
-  <section class="centerAlign">
+  <section id="omoss" class="centerAlign">
     <div>
       <h2 class="contentGap">Om Nordstrand Natur-Terapi</h2>
       <div class="aboutSection">
@@ -87,7 +87,7 @@
   </section>
 
   <!-- Våre behandlinger -->
-  <section class="behandlinger">
+  <section id="behandlinger" class="behandlinger">
     <div class="contentGap">
       <h2>Våre behandlinger</h2>
       <p class="behandlingbody">
@@ -152,7 +152,7 @@
   </div>
 
   <!-- Våre utvalgte produkter -->
-  <section class="utvalgteContainer">
+  <section id="produkter" class="utvalgteContainer">
     <div class="topContainer">
       <h2>Våre utvalgte produkter</h2>
       <div>
@@ -178,7 +178,7 @@
   </section>
 
   <!-- Kontakt seksjon -->
-  <section class="fordeler">
+  <section id="kontakt" class="fordeler">
     <div class="kontaktContent">
       <div class="kontaktInfo">
         <h2>Kontakt oss</h2>
@@ -330,6 +330,45 @@
       } else {
         nav.classList.add('nav-active');
       }
+    });
+  </script>
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        let offsetTop = document.querySelector(this.getAttribute('href')).offsetTop;
+        let offset = 70; // Høyden på din faste navigasjonsmeny eller annet element
+
+        window.scrollTo({
+          top: offsetTop - offset,
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+  <script>
+    document.addEventListener('scroll', function () {
+      let navbarHeight = document.querySelector('.navbar').offsetHeight;
+      let buffer = 200; // Legg til en ekstra buffer for å justere aktiveringspunktet
+      let sections = document.querySelectorAll('section');
+      let navLinks = document.querySelectorAll('.navButtons .navLink');
+
+      sections.forEach(section => {
+        let top = window.scrollY;
+        let offset = section.offsetTop - navbarHeight - buffer; // Juster her
+        let height = section.offsetHeight;
+        let id = section.getAttribute('id');
+
+        if (top >= offset && top < offset + height) {
+          navLinks.forEach(link => {
+            link.classList.remove('navLinkActive');
+            if (link.getAttribute('href') === '#' + id) {
+              link.classList.add('navLinkActive');
+            }
+          });
+        }
+      });
     });
   </script>
 

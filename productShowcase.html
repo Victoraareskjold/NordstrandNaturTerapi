@@ -1,90 +1,102 @@
 <!DOCTYPE html>
 <html lang="no">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Produkt Visning</title>
 
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="fonts.css" />
-    <link rel="stylesheet" href="productShowcase.css" />
-  </head>
-  <body>
-    <!-- Navbar -->
-    <section class="navbar">
-      <div class="navbarContent">
-        <a href="index.html">
-          <img
-            class="navLogo"
-            src="/images/nntLogo.png"
-            alt="Nordstrand NaturTerapi"
-          />
-        </a>
-        <ul class="navButtons">
-          <li class="navButton"><a href="#">lorem</a></li>
-          <li class="navButton"><a href="#">ipsum</a></li>
-          <li class="navButton"><a href="#">dolor</a></li>
-          <li class="navButton"><a href="#">sit</a></li>
-        </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Produkt Visning</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="fonts.css" />
+  <link rel="stylesheet" href="productShowcase.css" />
+  <link rel="stylesheet" href="mobileStyles.css">
+</head>
+
+<body>
+  <section class="navbar">
+    <div class="navbarContent">
+      <a href="index.html" class="navLogoLink">
+        <img class="navLogo" src="/images/profilBilde.jpeg" alt="Nordstrand NaturTerapi" />
+        <p>Nordstrand Naturterapi</p>
+      </a>
+      <button class="hamburger" id="hamburger">&#9776;</button> <!-- Hamburger Icon -->
+      <!-- <ul class="navButtons" id="navButtons">
+        <li class="navButton"><a href="#">Om oss</a></li>
+        <li class="navButton"><a href="#">Behandlinger</a></li>
+        <li class="navButton"><a href="#">Våre produkter</a></li>
+        <li class="navButton"><a href="#">Kontakt oss</a></li>
         <button class="contactButton">Kontakt oss</button>
-      </div>
-    </section>
+      </ul> -->
+    </div>
+  </section>
 
-    <!-- Product showcase -->
-    <section>
-      <div id="produktInfo" class="productShowcaseContainer">
-        <!-- Produktinformasjonen vil bli lastet og vist her -->
-        <!-- Produktinformasjonen vil bli lastet og vist her -->
-        <!-- Produktinformasjonen vil bli lastet og vist her -->
-      </div>
-    </section>
+  <!-- Product showcase -->
+  <section>
+    <div id="produktInfo" class="productShowcaseContainer">
+      <!-- Produktinformasjonen vil bli lastet og vist her -->
+      <!-- Produktinformasjonen vil bli lastet og vist her -->
+      <!-- Produktinformasjonen vil bli lastet og vist her -->
+    </div>
+  </section>
 
-    <!-- Våre utvalgte produkter -->
-    <section class="utvalgteContainer">
-      <div class="topContainer">
-        <h2>Våre utvalgte produkter</h2>
-        <div>
-          <button><img src="" alt="" /></button>
-          <button><img src="" alt="" /></button>
-        </div>
+  <!-- Våre utvalgte produkter -->
+  <section class="utvalgteContainer">
+    <div class="topContainer">
+      <h2>Våre utvalgte produkter</h2>
+      <div>
+        <button><img src="" alt="" /></button>
+        <button><img src="" alt="" /></button>
       </div>
-      <div class="productContainer" id="product-container">
-        <!-- <div class="productCard">
-          <img class="productImg" src="/images/produkter/product1.png" alt="" />
-          <div class="infoContainer">
-            <h4>Produkt #1</h4>
-            <div class="line"></div>
-            <div class="priceCart">
-              <p>279 ,-</p>
-              <button>
-                Legg til i handlekurv <img src="/images/Arrow 1.png" alt="" />
-              </button>
-            </div>
-          </div>
-        </div> -->
-      </div>
-    </section>
+    </div>
+    <div class="productContainer" id="product-container">
+      <!-- Produktinformasjonen vil bli lastet og vist her -->
+      <!-- Produktinformasjonen vil bli lastet og vist her -->
+      <!-- Produktinformasjonen vil bli lastet og vist her -->
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <section class="footer">
-      <div clas="rowGroup">
-        <div class="group1">
-          <img src="/images/logoHvitntt.png" alt="" />
-        </div>
-        <div class="group2">
-          <img src="/images/logoHvitntt.png" alt="" />
-        </div>
-        <div class="group3">
-          <img src="/images/logoHvitntt.png" alt="" />
-        </div>
-        <div class="group4">
-          <img src="/images/logoHvitntt.png" alt="" />
-        </div>
+  <!-- Footer -->
+  <section class="footer">
+    <div class="rowGroup">
+      <div class="group1">
+        <img style="height: 64px; width: 64px; margin-bottom: 20px; border-radius: 100px;"
+          src="/images/profilBilde.jpeg" alt="logo">
+        <p class="p2" style="color: white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus congue leo
+          ac libero laoreet eleifend. Nulla facilisi.</p>
       </div>
-    </section>
+      <div class=" group2">
+        <h6 style="color: white;">Kontakt oss</h6>
+        <a href="https://www.facebook.com/people/Nordstrand-Naturterapi/100063478213934/">
+          <p class="p2" style="color: white;">Facebook</p>
+        </a>
+        <a href="tel:91664254">
+          <p class="p2" style="color: white;">Ring oss</p>
+        </a>
+        <a href="mail:post@nordstrandnaturterapi.no">
+          <p class="p2" style="color: white;">Send oss en mail</p>
+        </a>
+      </div>
+      <div class="group3">
+      </div>
+      <div class="group4">
+      </div>
+    </div>
+  </section>
 
-    <!-- Scipts -->
-    <script type="module" src="/firebase-config.js"></script>
-    <script type="module" src="/load-products.js"></script>
-    <script type="module" src="/productShowcase.js"></script>
-  </body>
+  <!-- Scipts -->
+  <script type="module" src="/firebase-config.js"></script>
+  <script type="module" src="/load-products.js"></script>
+  <script type="module" src="/productShowcase.js"></script>
+  <script>
+    document.getElementById('hamburger').addEventListener('click', function () {
+      var nav = document.getElementById('navButtons');
+      if (nav.classList.contains('nav-active')) {
+        nav.classList.remove('nav-active');
+      } else {
+        nav.classList.add('nav-active');
+      }
+    });
+  </script>
+</body>
+
 </html>

@@ -67,3 +67,14 @@ section {
   border-bottom: 1px solid #e5e5e5;
   width: 100% !important;
 }
+
+@media only screen and (max-width: 768px) {
+  .productShowcaseContainer {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .productShowcaseContainer img {
+    width: 100%;
+  }
+}

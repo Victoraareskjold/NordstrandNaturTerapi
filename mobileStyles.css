@@ -136,6 +136,10 @@
     display: none;
   }
 
+  .sendbtncontainer button {
+    display: block;
+  }
+
   .heroSectionContent {
     display: flex;
     flex-direction: column;
@@ -251,5 +255,10 @@
     gap: 20px;
   }
 
-  /* Legg til ytterligere stiler her for å tilpasse for mobilvisning */
+  .modal-content {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0;
+    height: 100%;
+  }
 }

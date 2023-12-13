@@ -33,6 +33,10 @@ body {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 section {
   display: flex;
   flex-direction: column;
@@ -109,6 +113,7 @@ a {
   width: auto;
   padding: 0 10px 0 10px;
   align-self: center;
+  font-family: "Inter";
 }
 
 .contactButton {
@@ -118,6 +123,20 @@ a {
   border-radius: 25px;
   font-size: 16px;
   color: white;
+}
+
+.contactButton:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.navbarContent button {
+  margin-left: 20px;
+}
+
+.navLinkActive {
+  font-weight: 600;
+  border-bottom: 2px solid var(--primary); /* Eksempel: Svart strek under elementet */
 }
 
 /* Hero styling */
@@ -592,6 +611,7 @@ a {
   height: 100%;
   width: 50%;
   object-fit: cover;
+  z-index: 49;
 }
 
 .kontaktInfo {
