@@ -14,13 +14,17 @@ onSnapshot(behandlingerRef, (querySnapshot) => {
     const behandling = doc.data();
     behandlingerHTML += `
       <div class="behandlingerCard">
+      <a href="behandlingerShowcase.html?id=${doc.id}">
         <img src="${behandling.image}" alt="${behandling.name}" />
+        </a>
         <div class="alignment">
+        <a href="behandlingerShowcase.html?id=${doc.id}">
           <div class="cardText">
             <h3>${behandling.name}</h3>
             <p>${behandling.description}</p>
             <a href="behandlingerShowcase.html?id=${doc.id}"><button class="simpleBtn">Les mer..</button></a>
           </div>
+          </a>
           <button class="primaryBtn bestillTimeBtn">Bestill time</button>
         </div>
       </div>

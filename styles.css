@@ -68,8 +68,8 @@ img {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 4px;
+  padding-bottom: 4px;
   max-width: 1440px;
   width: 100%;
 }
