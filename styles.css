@@ -168,10 +168,12 @@ a {
 
 .heroSection h1 {
   margin-bottom: 20px;
+  color: var(--primary);
 }
 
 .heroSection p {
   margin-bottom: 40px;
+  color: var(--primary);
 }
 
 .omOssImage {
