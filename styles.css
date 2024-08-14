@@ -22,9 +22,8 @@
 }
 
 body {
-  padding: 0;
   margin: 0;
-  height: 100%;
+  height: 95%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,6 +40,7 @@ section {
   display: flex;
   flex-direction: column;
   width: 1440px;
+  align-self: center;
 }
 
 img {
@@ -59,7 +59,6 @@ img {
   z-index: 50;
   background-color: white;
   position: fixed;
-
   box-shadow: 0 4px 80px rgba(0, 0, 0, 0.1); /* Skyggeeffekt */
 }
 
@@ -71,7 +70,7 @@ img {
   padding-top: 4px;
   padding-bottom: 4px;
   max-width: 1440px;
-  width: 100%;
+  width: 95%;
 }
 
 .navLogo {
@@ -156,7 +155,7 @@ a {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100% !important;
+  width: 95% !important;
   max-width: 1440px; /* Tilpasser bredden til containeren */
   padding: 196px 0 120px 0;
   margin: auto; /* Sentrerer innholdet innenfor maks bredde */
@@ -178,7 +177,7 @@ a {
 
 .omOssImage {
   width: 50%;
-  border-radius: 100%;
+  border-radius: 95%;
 }
 
 /* About us styling */
@@ -187,7 +186,7 @@ a {
   padding: 120px 0 120px 0;
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 95%;
   max-width: 1440px;
 }
 
@@ -210,15 +209,15 @@ a {
 
 .aboutSection h3 {
   margin-bottom: 4px;
-  width: 100%;
+  width: 95%;
 }
 
 .aboutSection p {
-  width: 100%;
+  width: 95%;
 }
 
 .textContainer {
-  width: 100%;
+  width: 95%;
 }
 
 .aboutText {
@@ -254,10 +253,10 @@ a {
 .cardContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
   max-width: 1440px;
-  width: 100%;
+  width: 95%;
   gap: 40px;
   row-gap: 60px;
 }
@@ -355,7 +354,7 @@ a {
 
 .bookingSection {
   max-width: 1440px;
-  width: 100%;
+  width: 95%;
 } */
 
 /* Booking modal */
@@ -365,8 +364,8 @@ a {
   z-index: 51;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
+  width: 95%;
+  height: 95%;
   overflow: hidden;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
@@ -448,7 +447,7 @@ a {
 /* Utvalgte produkter */
 .utvalgteContainer {
   max-width: 1440px;
-  width: 100%;
+  width: 95%;
   padding: 64px 0 64px 0;
   text-align: center;
   display: flex;
@@ -460,7 +459,7 @@ a {
 }
 
 .productContainer {
-  width: 100%;
+  width: 95%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -472,7 +471,7 @@ a {
   display: flex;
   justify-content: space-between;
   max-width: 1440px;
-  width: 100%;
+  width: 95%;
 }
 
 .productCard {
@@ -494,7 +493,7 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 95%;
   height: 350px;
   background-color: rgba(
     0,
@@ -527,7 +526,7 @@ a {
 }
 
 .productImg {
-  width: 100%;
+  width: 95%;
   height: 350px;
   object-fit: cover;
 }
@@ -558,6 +557,108 @@ a {
   font-size: 14px;
 }
 
+/* Blogginnlegg Kort */
+.bloggInnleggContainer {
+  max-width: 1440px;
+  width: 95%;
+  padding: 64px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  overflow-x: hidden;
+}
+
+.blogPostCard {
+  position: relative;
+  text-align: left;
+  width: 330px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px 16px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.horizontalDisplay {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blogPostImgContainer {
+  width: 95%;
+  height: 200px;
+  overflow: hidden;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.blogPostImg {
+  width: 95%;
+  height: 95%;
+  object-fit: cover;
+}
+
+.blogPostContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.blogPostContent h4 {
+  font-family: "Buenard-Bold";
+  font-size: 18px;
+  color: var(--primary);
+  margin: 0;
+}
+
+.blogPostContent p {
+  font-family: "Inter";
+  font-size: 14px;
+  color: var(--black76);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.readMoreButton {
+  align-self: start;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-family: "Inter";
+  font-size: 14px;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+.readMoreButton:hover {
+  background-color: var(--primarydark);
+  cursor: pointer;
+}
+
+.settDenneIMidten {
+  display: flex;
+  justify-content: center;
+  gap: 64;
+  padding: 76px 0 0 0;
+  min-height: 83vh;
+}
+
+.blogHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 600px;
+}
+
 /* Fordeler ved våre produkter */
 .fordeler {
   width: 100vw;
@@ -581,7 +682,7 @@ a {
 .fordelerContainer {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 95%;
   align-items: center;
   justify-content: center;
   background: white;
@@ -590,7 +691,7 @@ a {
 }
 
 .fordelCard {
-  width: 100%;
+  width: 95%;
   border-radius: 2px;
 }
 
@@ -598,20 +699,20 @@ a {
   display: flex;
   flex-direction: row;
   max-width: 1440px;
-  width: 100%;
+  width: 95%;
   align-items: flex-start;
   background: white;
   border-radius: 10px;
   overflow: hidden;
   min-height: 450px;
-  height: 100%;
+  height: 95%;
 }
 
 .mapStyle {
   display: flex;
   min-height: 450px;
 
-  height: 100%;
+  height: 95%;
   width: 50%;
   object-fit: cover;
   z-index: 49;
@@ -623,13 +724,13 @@ a {
   text-align: left;
   width: 50%;
   padding: 40px 20px;
-  height: 100%;
+  height: 95%;
   box-sizing: border-box;
 }
 
 .sendbtncontainer {
   display: flex;
-  width: 100%;
+  width: 95%;
   justify-content: left;
   align-items: end;
 }
@@ -637,7 +738,7 @@ a {
 .row {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  width: 95%;
   gap: 20px;
 }
 
@@ -648,14 +749,14 @@ a {
 }
 
 .inputContainer.fullwidth {
-  flex-basis: 100%;
+  flex-basis: 95%;
 }
 
 input[type="text"],
 input[type="tel"],
 input[type="email"],
 textarea {
-  width: 100%;
+  width: 95%;
   border: none;
   border-bottom: 1.5px solid #999;
   padding: 6px 0 12px 0;
@@ -718,7 +819,7 @@ textarea:focus {
   flex-direction: row;
   max-width: 1440px;
   justify-content: space-between;
-  width: 100%;
+  width: 95%;
   gap: 64px;
 }
 
@@ -727,7 +828,7 @@ textarea:focus {
 .group3,
 .group4 {
   text-align: left;
-  width: 100%;
+  width: 95%;
   display: flex;
   flex-direction: column;
 }

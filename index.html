@@ -117,13 +117,6 @@
     </div>
   </section>
 
-  <!-- Booking -->
-  <!-- <section class="booking">
-    <div class="bookingSection">
-      <h2>Book en time hos oss</h2>
-    </div>
-  </section> -->
-
   <!-- Booking modal -->
   <div id="bookingModal" class="modal">
     <div class="modal-content">
@@ -159,6 +152,16 @@
     </div>
     <h3>Kommer snart!</h3>
     <div class="productContainer" id="product-container">
+    </div>
+  </section>
+
+  <!-- Blogginnlegg -->
+  <section id="bloggInnlegg" class="bloggInnleggContainer">
+    <div class="topContainer">
+      <h2>Siste Blogginnlegg</h2>
+    </div>
+    <div class="blogPostsContainer" id="blog-posts-container">
+      <!-- Blogginnlegg vil lastes her av JavaScript -->
     </div>
   </section>
 
@@ -244,6 +247,7 @@
   <script type="module" src="/firebase-config.js"></script>
   <script type="module" src="/load-products.js"></script>
   <script type="module" src="/load-behandlinger.js"></script>
+  <script type="module" src="/load-blogposts.js"></script>
   <script type="module">
     import { visKalender } from '/modal-functions.js';
 

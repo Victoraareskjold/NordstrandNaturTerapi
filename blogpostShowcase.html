@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blogginnlegg Detaljer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="fonts.css" />
+  <link rel="stylesheet" href="blogPostShowcase.css" />
+  <link rel="stylesheet" href="mobileStyles.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <section class="navbar">
+    <div class="navbarContent">
+      <a href="index.html" class="navLogoLink">
+        <img class="navLogo" src="/images/profilBilde.jpeg" alt="Nordstrand NaturTerapi" />
+        <p>Nordstrand Naturterapi</p>
+      </a>
+      <button class="hamburger" id="hamburger">&#9776;</button> <!-- Hamburger Icon -->
+      <!-- <ul class="navButtons" id="navButtons">
+          <li class="navButton"><a href="#">Om oss</a></li>
+          <li class="navButton"><a href="#">Behandlinger</a></li>
+          <li class="navButton"><a href="#">Våre produkter</a></li>
+          <li class="navButton"><a href="#">Kontakt oss</a></li>
+          <button class="contactButton">Kontakt oss</button>
+        </ul> -->
+    </div>
+  </section>
+
+  <!-- Innhold -->
+  <section class="blogPostShowcaseContainer">
+    <div id="blogPostShowcase" class="settDenneIMidten">
+      <!-- Detaljert blogginnlegg informasjon vil bli lastet og vist her -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <section class="footer">
+    <div class="rowGroup">
+      <div class="group1">
+        <img style="height: 64px; width: 64px; margin-bottom: 20px; border-radius: 100px;"
+          src="/images/profilBilde.jpeg" alt="logo">
+        <p class="p2" style="color: white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus congue leo
+          ac libero laoreet eleifend. Nulla facilisi.</p>
+      </div>
+      <div class=" group2">
+        <h6 style="color: white;">Kontakt oss</h6>
+        <a href="https://www.facebook.com/people/Nordstrand-Naturterapi/100063478213934/">
+          <p class="p2" style="color: white;">Facebook</p>
+        </a>
+        <a href="tel:91664254">
+          <p class="p2" style="color: white;">Ring oss</p>
+        </a>
+        <a href="mail:post@nordstrandnaturterapi.no">
+          <p class="p2" style="color: white;">Send oss en mail</p>
+        </a>
+      </div>
+      <div class="group3">
+      </div>
+      <div class="group4">
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script type="module" src="/firebase-config.js"></script>
+  <script type="module" src="/load-blogposts.js"></script>
+  <script type="module" src="/blogPostShowcase.js"></script>
+</body>
+
+</html>
