@@ -267,10 +267,11 @@ a {
   width: 100%;
   background: white;
   display: flex;
+  max-width: 978px;
   flex-direction: row;
   justify-content: space-between;
   text-align: left; /* Justerer innholdet i containeren til venstre */
-  max-height: 233px;
+  max-height: 290px;
 }
 
 .behandlingerCard img {
@@ -301,7 +302,7 @@ a {
   font-size: 14px;
   font-weight: 300;
   line-height: 20px;
-  max-height: 80px;
+  max-height: 140px;
   overflow: hidden;
 }
 
