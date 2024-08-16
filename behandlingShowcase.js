@@ -25,11 +25,24 @@ if (behandlingerId) {
                   <div>
 
                     <div class="columnContainer">
-                      <h1>${behandlinger.name}</h1>
-                      <p>${behandlinger.description}</p>
-                      <p>Pris: ${behandlinger.pris},-</p>
-                      <button class="primaryBtn bestillTimeBtn">Bestill time</button>
-                    </div>
+                      <h1>${behandlinger.name || ""}</h1>
+                      ${
+                        behandlinger.description
+                          ? `<p>${behandlinger.description}</p>`
+                          : ""
+                      }
+                      ${
+                        behandlinger.description2
+                          ? `<p>${behandlinger.description2}</p>`
+                          : ""
+                      }
+                      ${
+                        behandlinger.pris
+                          ? `<p>Pris: ${behandlinger.pris},-</p>`
+                          : ""
+                      }
+              <button class="primaryBtn bestillTimeBtn">Bestill time</button>
+            </div>
 
                   </div>
 
