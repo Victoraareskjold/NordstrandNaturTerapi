@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Nordstrand Natur Terapi</title>
+  <title>Nordstrand Naturterapi</title>
 
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
@@ -31,7 +31,7 @@
       <button class="hamburger" id="hamburger">&#9776;</button> <!-- Hamburger Icon -->
       <ul class="navButtons" id="navButtons">
         <li class="navButton"><a href="#omoss" class="navLink">Om oss</a></li>
-        <li class="navButton"><a href="#behandlinger" class="navLink">Behandlinger</a></li>
+        <li class="navButton"><a href="#behandlinger" class="navLink">Tjenester</a></li>
         <li class="navButton"><a href="#produkter" class="navLink">Våre produkter</a></li>
         <li class="navButton"><a href="#kontakt" class="navLink">Kontakt oss</a></li>
         <button class="contactButton" onclick="location.href='#behandlinger'">Book time</button>
@@ -61,7 +61,7 @@
   <!-- About -->
   <section id="omoss" class="centerAlign">
     <div>
-      <h2 class="contentGap">Om Nordstrand Natur Terapi</h2>
+      <h2 class="contentGap">Om Nordstrand Naturterapi</h2>
       <div class="aboutSection">
         <div class="aboutText">
           <h3>Hvem er jeg?</h3>
@@ -263,10 +263,10 @@
           <p class="p2" style="color: white; text-decoration: underline;">Facebook</p>
         </a>
         <a href="tel:91664254">
-          <p class="p2" style="color: white; text-decoration: underline;">Ring oss</p>
+          <p class="p2" style="color: white; text-decoration: underline;">91664254</p>
         </a>
         <a href="mail:cathrine.nordsveen@online">
-          <p class="p2" style="color: white; text-decoration: underline;">Send oss en mail</p>
+          <p class="p2" style="color: white; text-decoration: underline;">cathrine.nordsveen@online</p>
         </a>
       </div>
       <div class="group3">
@@ -293,15 +293,15 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      var map = L.map('map').setView([59.8819071, 10.7837266], 12);
+      var map = L.map('map').setView([59.862690, 10.805190], 13);
 
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '© OpenStreetMap contributors'
       }).addTo(map);
 
-      L.marker([59.8819071, 10.7837266]).addTo(map)
-        .bindPopup('Nordstrand Naturterapi Holtet.')
+      L.marker([59.862690, 10.805190]).addTo(map)
+        .bindPopup('Nordstrand Naturterapi Holtet. </br> Åpent mandag og tirsdag 10-19')
 
     });
   </script>
